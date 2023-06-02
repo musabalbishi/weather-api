@@ -44,7 +44,7 @@ const getWeather = async (city) => {
     if (data.weather[0].main === "Clear") {
       weatherIcon.src = "./img/icons/clear.png";
     } else if (data.weather[0].main === "Clouds") {
-      weatherIcon.src = "./img/icons/Clouds.png";
+      weatherIcon.src = "./img/icons/brokenCloiuds.png";
     } else if (data.weather[0].main === "Rain") {
       weatherIcon.src = "./img/icons/Rain.png";
     } else if (data.weather[0].main === "Mist") {
