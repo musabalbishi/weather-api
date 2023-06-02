@@ -1,0 +1,7 @@
+import { getWeather } from "./forcast";
+
+getWeather(10, 10, Intl.DateTimeFormat().resolvedOptions().timeZone).then(
+  (res) => {
+    console.log(res.data);
+  }
+);
