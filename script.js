@@ -14,7 +14,6 @@ const getWeather = async (city) => {
   //
   if (typeof data.name === "undefined") {
     document.querySelector(".city-name").innerHTML = "helloooooo";
-    document.querySelector(".city-name").innerHTML = "";
     document.querySelector(".feels-like").innerHTML = "";
     document.querySelector(".max-temp").innerHTML = "";
     document.querySelector(".min-temp").innerHTML = "";
