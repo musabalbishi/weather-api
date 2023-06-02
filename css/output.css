@@ -554,8 +554,8 @@ video {
   position: absolute;
 }
 
-.relative {
-  position: relative;
+.sticky {
+  position: sticky;
 }
 
 .inset-x-0 {
@@ -563,8 +563,20 @@ video {
   right: 0px;
 }
 
+.left-0 {
+  left: 0px;
+}
+
+.top-0 {
+  top: 0px;
+}
+
 .z-20 {
   z-index: 20;
+}
+
+.z-40 {
+  z-index: 40;
 }
 
 .mx-auto {
@@ -655,11 +667,6 @@ video {
 .bg-blue-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(96 165 250 / var(--tw-bg-opacity));
-}
-
-.bg-slate-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
 .bg-white {
