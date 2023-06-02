@@ -1,67 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/output.css" />
-    <title>Weather API</title>
-  </head>
-  <body class="bg-slate-300">
-    <!-- HEADER -->
-    <header
-      class="header bg-slate-500 flex justify-between items-center h-14 px-12"
-    >
-      <!-- logo -->
-      <div class="logo">LOGO</div>
 
-      <!-- nav -->
-      <nav class="nav">
-        <ul class="flex gap-x-6">
-          <a href="#">nav</a>
-          <a href="#">nav</a>
-          <a href="#">nav</a>
-        </ul>
-      </nav>
-    </header>
-    <!-- END HEADER -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/output.css" />
+  <title>Weather API</title>
+</head>
+<!-- HEADER -->
+<header class="header bg-slate-500 flex justify-between items-center h-14 px-12">
+  <!-- logo -->
+  <div class="logo">LOGO</div>
 
-    <!-- SECTIONS -->
-    <!-- welcome section -->
-    <section class="section section-1 h-screen p-10"></section>
-    <!-- Api section -->
-    <section class="section section-2 h-screen bg-blue-400 p-10">
-      <div class="input-control flex gap-x-6">
-        <button id="weather-btn" class="border" type="submit">
-          get waether
-        </button>
-        <!-- latitude -->
-        <!-- <input
-          type="text"
-          id="latitude"
-          class="form-control rounded p-2"
-          placeholder="latitude"
-        /> -->
-        <!-- longtitude -->
-        <!-- <input
-          type="text"
-          id="latitude"
-          class="form-control rounded p-2"
-          placeholder="latitude"
-        /> -->
+  <!-- nav -->
+  <nav class="nav">
+    <ul class="flex gap-x-6">
+      <a href="#">nav</a>
+      <a href="#">nav</a>
+      <a href="#">nav</a>
+    </ul>
+  </nav>
+</header>
+<!-- END HEADER -->
+
+<!-- SECTIONS -->
+<!-- welcome section -->
+<section class="section section-1 h-screen p-10 ">
+  <div
+    class="container rounded-2xl bg-gradient-to-r from-indigo-500 from-5% via-sky-500 via-45% to-emerald-500 to-90%  max-w-4xl mx-auto grid grid-cols-2 ">
+    <div class="text justify-self-center self-center flex flex-col">
+      <h1 class="text-4xl font-semibold text-white text-center mt-5">Welcome</h1>
+      <h3 class="text-lg font-light text-white text-center my-5">Lorem ipsum dolor sit amet, consectetur adipisicing
+        elit. Saepe quisquam dolores laudantium inventore
+        eveniet
+      </h3>
+      <div class="self-center ">
+        <button class="rounded-md bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ">Get Started</button>
       </div>
-      <!--  -->
-      <input type="text" id="search-city" />
-      <div class="card">
-        <p class="city-name"></p>
-        <p class="feels-like"></p>
-        <p class="max-temp"></p>
-        <p class="min-temp"></p>
-        <p class="feels-like"></p>
+    </div>
+    <div class="image-box w-2/3 justify-self-center self-center 	"><img src="./image/Weather-amico.png"></div>
+  </div>
+</section>
+
+
+<!-- Api section -->
+<section class="section section-2 h-screen bg-blue-400 p-10">
+  <div class="input-control flex gap-x-6 my-8">
+    <input type="text" id="search-city" />
+    <button id="weather-btn" class="border" type="submit">
+      get waether
+    </button>
+  </div>
+  <!-- CARD -->
+  <!-- component -->
+  <div class="min-h-screen flex items-center justify-center bg-gradient-to-r from-indigo-500 from-5% via-sky-500 via-45% to-emerald-500 to-90%">
+    <div class="flex flex-col bg-white rounded p-4 w-full max-w-xs">
+      <div class="city-name font-bold text-xl"></div>
+      <div
+        class="mt-6 text-6xl self-center inline-flex items-center justify-center rounded-lg text-indigo-400 h-24 w-24">
+      <!-- image -->
       </div>
-    </section>
-    <!-- END SECTIONS -->
-    <footer class="footer h-40">footer</footer>
-    <script src="script.js"></script>
-  </body>
+      <div class="flex flex-row items-center justify-center mt-6">
+        <div class="feels-like font-medium text-6xl"></div>
+        <div class="flex flex-col items-center ml-6">
+          <div>Cloudy</div>
+          <div class="mt-1">
+            <span class="text-sm"><i class="far fa-long-arrow-up"></i></span>
+            <span class="max-temp text-sm font-light text-gray-500">28°C</span>
+          </div>
+          <div>
+            <span class="text-sm"><i class="far fa-long-arrow-down"></i></span>
+            <span class="min-temp text-sm font-light text-gray-500">20°C</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-row justify-between mt-6">
+        <div class="flex flex-col items-center">
+          <div class="font-medium text-sm">Wind</div>
+          <div class="wind text-sm text-gray-500">9k/h</div>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="font-medium text-sm">Humidity</div>
+          <div class="humidity text-sm text-gray-500">68%</div>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="font-medium text-sm">Visibility</div>
+          <div class="visibility text-sm text-gray-500">10km</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END CARD  -->
+  
+</section>
+<!-- abdulmalik -->
+<!-- END SECTIONS -->
+<footer class="footer h-40">footer</footer>
+<script src="script.js"></script>
+</body>
+
 </html>
