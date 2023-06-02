@@ -1,7 +1,14 @@
-import { getWeather } from "./forcast";
+const getWeatherBtn = document.getElementById("weather-btn");
 
-getWeather(10, 10, Intl.DateTimeFormat().resolvedOptions().timeZone).then(
-  (res) => {
-    console.log(res.data);
-  }
-);
+//
+const apiKey = "837d7709853d7ea4af7694c9667e89e9";
+const apiUrl =
+  "https://api.openweathermap.org/data/2.5/weather?units=metric&q=mecca";
+
+const getWeather = async () => {
+  const response = await fetch(apiUrl + `&appid=${apiKey}`);
+  let data = await response.json();
+  console.log(data);
+};
+
+getWeatherBtn.addEventListener("click", getWeather);

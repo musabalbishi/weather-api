@@ -522,10 +522,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.m-\[5rem\] {
-  margin: 5rem;
-}
-
 .flex {
   display: flex;
 }
@@ -534,20 +530,12 @@ video {
   height: 3.5rem;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
-.h-20 {
-  height: 5rem;
-}
-
 .h-40 {
   height: 10rem;
 }
 
-.flex-row {
-  flex-direction: row;
+.h-screen {
+  height: 100vh;
 }
 
 .items-center {
@@ -567,8 +555,8 @@ video {
   border-radius: 0.25rem;
 }
 
-.border-2 {
-  border-width: 2px;
+.border {
+  border-width: 1px;
 }
 
 .bg-blue-400 {
