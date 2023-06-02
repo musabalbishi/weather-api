@@ -1,5 +1,5 @@
 const getWeatherBtn = document.getElementById("weather-btn");
-
+const city = document.querySelector(".city-name");
 //
 const apiKey = "837d7709853d7ea4af7694c9667e89e9";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric";
