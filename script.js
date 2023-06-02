@@ -12,10 +12,18 @@ const getWeather = async (city) => {
   console.log(data);
 
   //
-  document.querySelector(".city-name").innerHTML = data.name;
-  document.querySelector(".feels-like").innerHTML = data.main.feels_like;
-  document.querySelector(".max-temp").innerHTML = data.main.temp_max;
-  document.querySelector(".min-temp").innerHTML = data.main.temp_min;
+  if (typeof data.name === "undefined") {
+    document.querySelector(".city-name").innerHTML = "helloooooo";
+    document.querySelector(".city-name").innerHTML = "";
+    document.querySelector(".feels-like").innerHTML = "";
+    document.querySelector(".max-temp").innerHTML = "";
+    document.querySelector(".min-temp").innerHTML = "";
+  } else {
+    document.querySelector(".city-name").innerHTML = data.name;
+    document.querySelector(".feels-like").innerHTML = data.main.feels_like;
+    document.querySelector(".max-temp").innerHTML = data.main.temp_max;
+    document.querySelector(".min-temp").innerHTML = data.main.temp_min;
+  }
 };
 
 getWeatherBtn.addEventListener("click", () => {
