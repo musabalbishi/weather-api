@@ -146,23 +146,27 @@
           <i class="pi pi-search text-slate-500 text-md font-bold"></i>
         </button>
       </div>
+      <h3 class="errorMsg hidden">City not found</h3>
+
       <!-- card -->
 
       <div
-        class="card-display my-6 w-1/2 mx-auto bg-white rounded-xl p-3 hidden">
-        <p class="city-name text-2xl font-medium"></p>
+        class="card-display my-6 w-1/2 mx-auto bg-white rounded-xl p-3 hidden"
+      >
+        <p class="city text-2xl font-medium"></p>
         <div class="weather-icon flex justify-center">
           <img src="./img/icons/brokenCloiuds.png" class="weather-icon w-1/4" />
         </div>
-        <div class="temp-desc flex justify-center items-center gap-4">
-          <p class="temp text-5xl font-small">23</p>
+        <div class="desc flex justify-center items-center gap-4">
+          <p class="tempreture text-5xl font-small">23</p>
           <p class="feels-like">22</p>
           <div class="desc-min-max flex flex-col items-center">
-            <p class="desc text-gray-700">cloudy</p>
+            <p class="desc text-gray-700"></p>
             <p class="max-temp text-gray-500">23</p>
             <p class="min-temp text-gray-500">24</p>
           </div>
         </div>
+
         <!--  -->
         <div class="humid-feel-visibility-wind flex justify-around mt-5">
           <div class="humid p-2 flex flex-col items-center">
