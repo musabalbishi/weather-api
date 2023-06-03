@@ -97,24 +97,15 @@
           <div class="flex flex-col md:flex-row md:mx-6">
             <a
               class="my-2 text-gray-700 text-md transition-colors duration-300 transform hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
-              class="my-2 text-gray-700 text-md transition-colors duration-300 transform hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
               href="#"
               >Home</a
             >
             <a
               class="my-2 text-gray-700 text-md transition-colors duration-300 transform hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
               href="#section-2"
-              class="my-2 text-gray-700 text-md transition-colors duration-300 transform hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
-              href="#section-2"
               >Weather</a
             >
             <a
-              class="my-2 text-gray-700 text-md transition-colors duration-300 transform hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
-              href="#section-3"
-              >Where to visit</a
-            >
-            <a
-              class="my-2 text-gray-700 text-md transition-colors duration-300 transform hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
               class="my-2 text-gray-700 text-md transition-colors duration-300 transform hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
               href="#section-3"
               >Where to visit</a
@@ -191,9 +182,6 @@
             <i class="pi pi-search text-slate-500 text-md font-bold"></i>
           </button>
         </div>
-        <p class="text-center text-2xl text-gray-500 py-8">
-          You can search by city name to view the weather
-        </p>
         <p class="text-center text-2xl text-gray-500 py-8">
           You can search by city name to view the weather
         </p>
@@ -285,9 +273,6 @@
     </section>
     <!-- END SECTIONS -->
     <!-- CITIES - WHERE TO VISIT -->
-
-    <!-- city card -->
-    <!-- <img src="./img/cities/london.jpg" alt="london" class="-z-20" /> -->
     <section class="section-3 bg-slate-200" id="section-3">
       <div class="container mx-auto">
         <p class="where-to-visit flex justify-center text-4xl py-10 font-bold">
@@ -297,7 +282,7 @@
           class="card-wrapper mx-auto w-full p-6 flex flex-col lg:flex-row gap-4 justify-around"
         >
           <!-- city card -->
-
+          <!-- <img src="./img/cities/london.jpg" alt="london" class="-z-20" /> -->
           <!-- LONDON -->
           <div
             class="card-weather bg-white w-full rounded-xl p-3 pb-10 lg:w-1/4 shadow-md"
@@ -326,6 +311,15 @@
               <div class="humid p-2 flex flex-col items-center">
                 <img src="./img/svg/humid.svg" class="w-8" />
                 <p class="humidity-london text-gray-500">10</p>
+              </div>
+
+              <div class="visibilit p-2 flex flex-col items-center">
+                <img src="./img/svg/visibility.svg" class="w-8" />
+                <p class="text-gray-500 visibility-london">22</p>
+              </div>
+              <div class="windy p-2 flex flex-col items-center">
+                <img src="./img/svg/wind.svg" class="w-8" />
+                <p class="wind-london text-gray-500">11</p>
               </div>
             </div>
           </div>
@@ -360,16 +354,18 @@
                 <img src="./img/svg/humid.svg" class="w-8" />
                 <p class="humidity-makkah text-gray-500">10</p>
               </div>
+
               <div class="visibilit p-2 flex flex-col items-center">
                 <img src="./img/svg/visibility.svg" class="w-8" />
-                <p class="text-gray-500 visibility-london">22</p>
+                <p class="text-gray-500 visibility-makkah">44</p>
               </div>
               <div class="windy p-2 flex flex-col items-center">
                 <img src="./img/svg/wind.svg" class="w-8" />
-                <p class="wind-london text-gray-500">11</p>
+                <p class="wind-makkah text-gray-500">13</p>
               </div>
             </div>
           </div>
+          <!--  -->
           <!-- MADINAH  -->
           <div
             class="card-weather bg-white w-full rounded-xl p-3 pb-10 lg:w-1/4 shadow-md"
@@ -413,15 +409,17 @@
             </div>
           </div>
         </div>
+        <p
+          class="where-to-visit flex justify-center text-center lg:text-left text-4xl py-12 font-bold"
+        >
+          Use our fully integrated Task management system
+        </p>
+        <p
+          class="text-4xl flex justify-center mx-auto font-bold pb-10 hover:text-blue-500"
+        >
+          <a href="task_manager.html">PLAN YOUR TRIP NOW</a>
+        </p>
       </div>
-      <p class="where-to-visit flex justify-center text-4xl font-semibold">
-        Use our fully integrated Task management system
-      </p>
-      <p
-        class="text-4xl flex justify-center mx-auto font-semibold pb-10 hover:text-blue-500"
-      >
-        <a href="task_manager.html">PLAN YOUR TRIP NOW</a>
-      </p>
     </section>
 
     <!--END CITIES -->
@@ -543,8 +541,6 @@
               </a>
 
               <a
-                target="_blank"
-                href="https://github.com/Abdulmalik055"
                 target="_blank"
                 href="https://github.com/Abdulmalik055"
                 class="mx-2 text-gray-600 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
