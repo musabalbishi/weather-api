@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+      rel="stylesheet" />
+    <!-- CSS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/primeicons/6.0.1/primeicons.css"
@@ -13,7 +20,7 @@
     <link rel="stylesheet" href="css/output.css" />
     <title>Weather API</title>
   </head>
-  <body class="bg-white">
+  <body class="bg-white font-tajawal">
     <!-- HEADER -->
     <nav
       x-data="{ isOpen: false }"
@@ -112,18 +119,21 @@
         <!-- text -->
         <div
           class="text text-center flex flex-col justify-center items-center lg:items-start relative">
-          <p class="text-4xl lg:text-6xl pb-6 text-left font-semibold">
-            WELCOME
+          <p
+            class="pb-5 font-tajawal bg-gradient-to-r from-blue-300 via-blue-500 to-blue-900 text-center bg-clip-text text-3xl sm:text-left font-extrabold text-transparent sm:text-5xl">
+            WELCOME TO WEATHER APP
           </p>
           <p
             class="text-xl pb-5 text-center lg:text-2xl lg:text-left text-gray-500 mx-auto">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta,
             elit. Soluta elit. Soluta delectus.
           </p>
-          <button
-            type="button"
-            class="text-2xl p-1.5 rounded-md bg-blue-400 transform hover:bg-blue-500 w-1/2 font-medium">
-            <a href="#section-2">Get Started</a>
+          <button type="button">
+            <a
+              class="block w-full rounded border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-blue-800 active:text-opacity-75 sm:w-auto"
+              href="/get-started">
+              Get Started
+            </a>
           </button>
         </div>
         <!--  -->
@@ -154,7 +164,8 @@
         </div>
 
         <!-- alert message error -->
-        <div class="w-96 relative right-0 items-end justify-end text-white bg-red-500 errorMsg hidden">
+        <div
+          class="w-96 relative right-0 items-end justify-end text-white bg-red-500 errorMsg hidden">
           <div
             x-cloak
             x-show="showAlert"
@@ -236,7 +247,7 @@
     <!--END CITIES -->
 
     <!-- TEAM SECTION -->
-    <section class="bg-slate-100 mb-20" id="team">
+    <section class="bg-slate-100 pb-20" id="team">
       <div class="container px-6 py-10 mx-auto">
         <h1
           class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl">
