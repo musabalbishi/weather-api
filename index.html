@@ -29,7 +29,7 @@
       class="sticky bg-white top-0 left-0 z-40 shadow"
     >
       <div
-        class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center"
+        class="container px-6 py-2 mx-auto md:flex md:justify-between md:items-center"
       >
         <div class="flex items-center justify-between">
           <!-- Logo -->
@@ -96,24 +96,33 @@
         >
           <div class="flex flex-col md:flex-row md:mx-6">
             <a
-              class="my-2 text-gray-700 transition-colors duration-300 transform hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
+              class="my-2 text-gray-700 text-md transition-colors duration-300 transform hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
+              class="my-2 text-gray-700 text-md transition-colors duration-300 transform hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
               href="#"
               >Home</a
             >
             <a
-              class="my-2 text-gray-700 transition-colors duration-300 transform hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
-              href="#"
+              class="my-2 text-gray-700 text-md transition-colors duration-300 transform hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
+              href="#section-2"
+              class="my-2 text-gray-700 text-md transition-colors duration-300 transform hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
+              href="#section-2"
               >Weather</a
             >
             <a
-              class="my-2 text-gray-700 transition-colors duration-300 transform hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
-              href="#team"
-              >Team</a
+              class="my-2 text-gray-700 text-md transition-colors duration-300 transform hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
+              href="#section-3"
+              >Where to visit</a
             >
             <a
-              class="my-2 text-gray-700 transition-colors duration-300 transform hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
-              href="#"
-              >About</a
+              class="my-2 text-gray-700 text-md transition-colors duration-300 transform hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
+              class="my-2 text-gray-700 text-md transition-colors duration-300 transform hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
+              href="#section-3"
+              >Where to visit</a
+            >
+            <a
+              class="my-2 text-gray-700 text-md transition-colors duration-300 transform hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0"
+              href="#team"
+              >Team</a
             >
           </div>
         </div>
@@ -122,6 +131,7 @@
     <!-- END HEADER -->
 
     <!-- SECTIONS -->
+    <!--  -->
     <!-- welcome section -->
     <section class="section section-1 h-screen p-10">
       <!--  -->
@@ -133,7 +143,7 @@
           class="text text-center flex flex-col justify-center items-center lg:items-start relative"
         >
           <p
-            class="pb-5 font-tajawal bg-gradient-to-r from-blue-300 via-blue-500 to-blue-900 text-center bg-clip-text text-3xl sm:text-left font-extrabold text-transparent sm:text-5xl md:text-2xl"
+            class="pb-5 font-tajawal bg-gradient-to-r from-blue-300 via-blue-500 to-blue-900 text-center bg-clip-text text-3xl sm:text-left font-extrabold text-transparent sm:text-5xl md:text-4xl"
           >
             WELCOME TO WEATHER APP
           </p>
@@ -159,7 +169,7 @@
       </div>
     </section>
     <!-- Api section -->
-    <section class="section section-2 h-screen bg-slate-100" id="section-2">
+    <section class="section section-2 pb-20 bg-slate-100" id="section-2">
       <div class="container px-3 mx-auto">
         <div
           class="card-control w-full flex gap-x-4 p-2 mx-auto justify-center md:lg:w-w-2/4 pb-5"
@@ -168,7 +178,7 @@
           <input
             type="text"
             id="search-city"
-            class="p-2 pb-2.5 w-2/4 rounded-xl focus:outline-none focus-visible:ring-2 focus:ring-blue-500 focus:ring-opacity-75"
+            class="p-2 pb-2.5 w-full lg:w-2/4 rounded-xl focus:outline-none focus-visible:ring-2 focus:ring-blue-500 focus:ring-opacity-75"
             placeholder="Enter City Name"
             autocomplete="on"
           />
@@ -181,7 +191,12 @@
             <i class="pi pi-search text-slate-500 text-md font-bold"></i>
           </button>
         </div>
-
+        <p class="text-center text-2xl text-gray-500 py-8">
+          You can search by city name to view the weather
+        </p>
+        <p class="text-center text-2xl text-gray-500 py-8">
+          You can search by city name to view the weather
+        </p>
         <!-- alert message error -->
         <div
           class="w-96 relative right-0 items-end justify-end text-white bg-red-500 errorMsg hidden"
@@ -227,7 +242,7 @@
         <!-- card -->
 
         <div
-          class="card-display w-full lg:w-2/3 mx-auto bg-white rounded-xl p-3 hidden"
+          class="card-display w-full lg:w-2/3 mx-auto bg-white rounded-xl p-3 hidden shadow-md"
         >
           <div class="card-weather">
             <p class="city text-2xl text-center font-medium"></p>
@@ -270,127 +285,145 @@
     </section>
     <!-- END SECTIONS -->
     <!-- CITIES - WHERE TO VISIT -->
-    <section class="section-3 h-screen bg-slate-200 p-12">
-      <p class="where-to-visit flex justify-center text-4xl py-10 font-bold">
-        WHERE TO VISIT
-      </p>
-      <div class="card-wrapper mx-auto w-full p-6 flex gap-4 justify-around">
-        <!-- city card -->
-        <!-- <img src="./img/cities/london.jpg" alt="london" class="-z-20" /> -->
-        <div class="card-weather bg-white rounded-xl p-3 pb-10 w-1/4">
+
+    <!-- city card -->
+    <!-- <img src="./img/cities/london.jpg" alt="london" class="-z-20" /> -->
+    <section class="section-3 bg-slate-200" id="section-3">
+      <div class="container mx-auto">
+        <p class="where-to-visit flex justify-center text-4xl py-10 font-bold">
+          WHERE TO VISIT
+        </p>
+        <div
+          class="card-wrapper mx-auto w-full p-6 flex flex-col lg:flex-row gap-4 justify-around"
+        >
+          <!-- city card -->
+
           <!-- LONDON -->
-          <img src="./img/icons/brokenCloiuds.png" class="weather-icon w-1/4" />
-          <p class="city-london text-2xl text-center font-medium">name</p>
-          <div class="weather-img flex justify-center"></div>
-          <div class="description flex justify-center items-center gap-4">
-            <p class="tempreture-london text-3xl lg:text-5xl font-small">23</p>
-            <p class="feels-like-london">22</p>
-            <div class="desc-min-max flex flex-col items-center">
-              <p class="desc-london text-gray-700">clear</p>
-              <p class="max-temp-london text-gray-500">23</p>
-              <p class="min-temp-london text-gray-500">24</p>
+          <div
+            class="card-weather bg-white w-full rounded-xl p-3 pb-10 lg:w-1/4 shadow-md"
+          >
+            <img
+              src="./img/icons/brokenCloiuds.png"
+              class="weather-icon w-1/4"
+            />
+            <p class="city-london text-2xl text-center font-medium">name</p>
+            <div class="weather-img flex justify-center"></div>
+            <div class="description flex justify-center items-center gap-4">
+              <p class="tempreture-london text-2xl lg:text-4xl font-small">
+                23
+              </p>
+              <p class="feels-like-london">22</p>
+              <div class="desc-min-max flex flex-col items-center">
+                <p class="desc-london text-gray-700">clear</p>
+                <p class="max-temp-london text-gray-500">23</p>
+                <p class="min-temp-london text-gray-500">24</p>
+              </div>
+            </div>
+            <!--  -->
+            <div
+              class="humid-feel-visibility-wind flex w-full justify-around mt-5 py-10"
+            >
+              <div class="humid p-2 flex flex-col items-center">
+                <img src="./img/svg/humid.svg" class="w-8" />
+                <p class="humidity-london text-gray-500">10</p>
+              </div>
             </div>
           </div>
-          <!--  -->
+          <!-- MAKKAH -->
           <div
-            class="humid-feel-visibility-wind flex justify-around mt-5 py-10"
+            class="card-weather bg-white w-full rounded-xl p-3 pb-10 lg:w-1/4 shadow-md"
           >
-            <div class="humid p-2 flex flex-col items-center">
-              <img src="./img/svg/humid.svg" class="w-8" />
-              <p class="humidity-london text-gray-500">10</p>
+            <img
+              src="./img/icons/brokenCloiuds.png"
+              class="weather-icon w-1/4"
+            />
+            <p class="city-makkah text-2xl text-center font-medium">name</p>
+            <div class="weather-img flex justify-center"></div>
+            <div
+              class="description-makkah flex justify-center items-center gap-4"
+            >
+              <p class="tempreture-makkah text-2xl lg:text-4xl font-small">
+                23
+              </p>
+              <p class="feels-like-makkah">22</p>
+              <div class="desc-min-max flex flex-col items-center">
+                <p class="desc-makkah text-gray-700">rainy</p>
+                <p class="max-temp-makkah text-gray-500">23</p>
+                <p class="min-temp-makkah text-gray-500">24</p>
+              </div>
             </div>
+            <!--  -->
+            <div
+              class="humid-feel-visibility-wind flex justify-around mt-5 py-10"
+            >
+              <div class="humid p-2 flex flex-col items-center">
+                <img src="./img/svg/humid.svg" class="w-8" />
+                <p class="humidity-makkah text-gray-500">10</p>
+              </div>
+              <div class="visibilit p-2 flex flex-col items-center">
+                <img src="./img/svg/visibility.svg" class="w-8" />
+                <p class="text-gray-500 visibility-london">22</p>
+              </div>
+              <div class="windy p-2 flex flex-col items-center">
+                <img src="./img/svg/wind.svg" class="w-8" />
+                <p class="wind-london text-gray-500">11</p>
+              </div>
+            </div>
+          </div>
+          <!-- MADINAH  -->
+          <div
+            class="card-weather bg-white w-full rounded-xl p-3 pb-10 lg:w-1/4 shadow-md"
+          >
+            <img
+              src="./img/icons/brokenCloiuds.png"
+              class="weather-icon w-1/4"
+            />
+            <p class="city-madina text-2xl text-center font-medium">name</p>
+            <div class="weather-img flex justify-center"></div>
+            <div
+              class="description-madina flex justify-center items-center gap-4"
+            >
+              <p class="tempreture-madina text-2xl lg:text-4xl font-small">
+                23
+              </p>
+              <p class="feels-like-madina">22</p>
+              <div class="desc-min-max flex flex-col items-center">
+                <p class="desc-madina text-gray-700">rainy</p>
+                <p class="max-temp-madina text-gray-500">23</p>
+                <p class="min-temp-madina text-gray-500">24</p>
+              </div>
+            </div>
+            <!--  -->
+            <div
+              class="humid-feel-visibility-wind flex justify-around mt-5 py-10"
+            >
+              <div class="humid p-2 flex flex-col items-center">
+                <img src="./img/svg/humid.svg" class="w-8" />
+                <p class="humidity-madina text-gray-500">10</p>
+              </div>
 
-            <div class="visibilit p-2 flex flex-col items-center">
-              <img src="./img/svg/visibility.svg" class="w-8" />
-              <p class="text-gray-500 visibility-london">22</p>
-            </div>
-            <div class="windy p-2 flex flex-col items-center">
-              <img src="./img/svg/wind.svg" class="w-8" />
-              <p class="wind-london text-gray-500">11</p>
-            </div>
-          </div>
-        </div>
-        <!-- MAKKAH -->
-        <div class="card-weather bg-white rounded-xl p-3 pb-10 w-1/4">
-          <img src="./img/icons/brokenCloiuds.png" class="weather-icon w-1/4" />
-          <p class="city-makkah text-2xl text-center font-medium">name</p>
-          <div class="weather-img flex justify-center"></div>
-          <div
-            class="description-makkah flex justify-center items-center gap-4"
-          >
-            <p class="tempreture-makkah text-3xl lg:text-5xl font-small">23</p>
-            <p class="feels-like-makkah">22</p>
-            <div class="desc-min-max flex flex-col items-center">
-              <p class="desc-makkah text-gray-700">rainy</p>
-              <p class="max-temp-makkah text-gray-500">23</p>
-              <p class="min-temp-makkah text-gray-500">24</p>
-            </div>
-          </div>
-          <!--  -->
-          <div
-            class="humid-feel-visibility-wind flex justify-around mt-5 py-10"
-          >
-            <div class="humid p-2 flex flex-col items-center">
-              <img src="./img/svg/humid.svg" class="w-8" />
-              <p class="humidity-makkah text-gray-500">10</p>
-            </div>
-
-            <div class="visibilit p-2 flex flex-col items-center">
-              <img src="./img/svg/visibility.svg" class="w-8" />
-              <p class="text-gray-500 visibility-makkah">44</p>
-            </div>
-            <div class="windy p-2 flex flex-col items-center">
-              <img src="./img/svg/wind.svg" class="w-8" />
-              <p class="wind-makkah text-gray-500">13</p>
-            </div>
-          </div>
-        </div>
-        <!--  -->
-        <!-- MADINAH  -->
-        <div class="card-weather bg-white rounded-xl p-3 pb-10 w-1/4">
-          <img src="./img/icons/brokenCloiuds.png" class="weather-icon w-1/4" />
-          <p class="city-madina text-2xl text-center font-medium">name</p>
-          <div class="weather-img flex justify-center"></div>
-          <div
-            class="description-madina flex justify-center items-center gap-4"
-          >
-            <p class="tempreture-madina text-3xl lg:text-5xl font-small">23</p>
-            <p class="feels-like-madina">22</p>
-            <div class="desc-min-max flex flex-col items-center">
-              <p class="desc-madina text-gray-700">rainy</p>
-              <p class="max-temp-madina text-gray-500">23</p>
-              <p class="min-temp-madina text-gray-500">24</p>
-            </div>
-          </div>
-          <!--  -->
-          <div
-            class="humid-feel-visibility-wind flex justify-around mt-5 py-10"
-          >
-            <div class="humid p-2 flex flex-col items-center">
-              <img src="./img/svg/humid.svg" class="w-8" />
-              <p class="humidity-madina text-gray-500">10</p>
-            </div>
-
-            <div class="visibilit p-2 flex flex-col items-center">
-              <img src="./img/svg/visibility.svg" class="w-8" />
-              <p class="text-gray-500 visibility-madina">44</p>
-            </div>
-            <div class="windy p-2 flex flex-col items-center">
-              <img src="./img/svg/wind.svg" class="w-8" />
-              <p class="wind-madina text-gray-500">13</p>
+              <div class="visibilit p-2 flex flex-col items-center">
+                <img src="./img/svg/visibility.svg" class="w-8" />
+                <p class="text-gray-500 visibility-madina">44</p>
+              </div>
+              <div class="windy p-2 flex flex-col items-center">
+                <img src="./img/svg/wind.svg" class="w-8" />
+                <p class="wind-madina text-gray-500">13</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <p class="where-to-visit flex justify-center text-4xl py-12 font-bold">
+      <p class="where-to-visit flex justify-center text-4xl font-semibold">
         Use our fully integrated Task management system
       </p>
       <p
-        class="text-4xl flex justify-center mx-auto font-bold pb-10 hover:text-blue-500"
+        class="text-4xl flex justify-center mx-auto font-semibold pb-10 hover:text-blue-500"
       >
         <a href="task_manager.html">PLAN YOUR TRIP NOW</a>
       </p>
     </section>
+
     <!--END CITIES -->
     <!-- TEAM SECTION -->
     <section class="bg-slate-100 pb-20" id="team">
@@ -510,7 +543,10 @@
               </a>
 
               <a
-                href="#"
+                target="_blank"
+                href="https://github.com/Abdulmalik055"
+                target="_blank"
+                href="https://github.com/Abdulmalik055"
                 class="mx-2 text-gray-600 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
                 aria-label="Github"
               >
