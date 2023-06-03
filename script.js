@@ -19,48 +19,54 @@ const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric";
 const getWeather = async (city) => {
   const response = await fetch(apiUrl + `&q=${city}` + `&appid=${apiKey}`);
 
-  if (response.status == 404) {
+  if (response.status === 404) {
     error.style.display = "block";
     weatherCard.style.display = "none";
-  } else if (response.status == 400) {
-    error.style.display = "block";
-    weatherCard.style.display = "none";
-  } else {
-    let data = await response.json();
-    console.log(data);
-
-    //
-    cityName.innerHTML = data.name;
-    temp.innerHTML = `${data.main.temp} &degC`;
-    feel.innerHTML = data.main.feels_like;
-    max_temp.innerHTML = data.main.temp_max;
-    min_temp.innerHTML = data.main.temp_min;
-    humidity.innerHTML = data.main.humidity;
-    wind.innerHTML = data.wind.speed;
-    visibility.innerHTML = data.visibility;
-    desc.innerHTML = data.weather[0].description;
-
-    //
-    if (data.weather[0].main === "Clear") {
-      weatherIcon.src = "./img/icons/clear.png";
-    } else if (data.weather[0].main === "Clouds") {
-      weatherIcon.src = "./img/icons/brokenCloiuds.png";
-    } else if (data.weather[0].main === "Rain") {
-      weatherIcon.src = "./img/icons/Rain.png";
-    } else if (data.weather[0].main === "Mist") {
-      weatherIcon.src = "./img/icons/Mist.png";
-    } else if (data.weather[0].main === "Drizzle") {
-      weatherIcon.src = "./img/icons/Drizzle.png";
-    } else if (data.weather[0].main === "broken clouds") {
-      weatherIcon.src = "./img/icons/brokenCloiuds.png";
-    } else {
-      weatherIcon.src = "./img/icons/brokenCloiuds.png";
-    }
-    weatherCard.style.display = "block";
-    error.style.display = "none";
+    return;
   }
+  if (response.status === 400) {
+    error.style.display = "block";
+    weatherCard.style.display = "none";
+    return;
+  }
+  let data = await response.json();
+  console.log(data);
+
+  //
+  cityName.innerHTML = data.name;
+  temp.innerHTML = `${data.main.temp} &degC`;
+  feel.innerHTML = data.main.feels_like;
+  max_temp.innerHTML = data.main.temp_max;
+  min_temp.innerHTML = data.main.temp_min;
+  humidity.innerHTML = data.main.humidity;
+  wind.innerHTML = data.wind.speed;
+  visibility.innerHTML = data.visibility;
+  desc.innerHTML = data.weather[0].description;
+  weatherIcon.src = getWeatherIcon(data.weather[0].main);
+
+  //
+
+  weatherCard.style.display = "block";
+  error.style.display = "none";
 };
 
+const getWeatherIcon = (weatherDesc) => {
+  if (weatherDesc === "Clear") {
+    return "./img/icons/clear.png";
+  } else if (weatherDesc === "Clouds") {
+    return "./img/icons/brokenCloiuds.png";
+  } else if (weatherDesc === "Rain") {
+    return "./img/icons/Rain.png";
+  } else if (weatherDesc === "Mist") {
+    return "./img/icons/Mist.png";
+  } else if (weatherDesc === "Drizzle") {
+    return "./img/icons/Drizzle.png";
+  } else if (weatherDesc === "broken clouds") {
+    return "./img/icons/brokenCloiuds.png";
+  } else {
+    return "./img/icons/brokenCloiuds.png";
+  }
+};
 getWeatherBtn.addEventListener("click", () => {
   getWeather(search.value);
 });
