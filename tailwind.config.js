@@ -11,6 +11,10 @@ module.exports = {
 
     extend: {
       colors: {},
+      fontFamily: {
+        sans: ["Poppins", "sans-serif"],
+        tajawal : ["Tajawal", "sans-serif !important"],
+      },
     },
   },
   plugins: [],
