@@ -1,3 +1,8 @@
+// import dotenv from "./dotenv";
+// dotenv.config();
+// require("dotenv").config();
+// const dotenv = require("dotenv").config();
+
 const getWeatherBtn = document.getElementById("weather-btn");
 const search = document.getElementById("search-city");
 const cityName = document.querySelector(".city");
@@ -13,10 +18,9 @@ const weatherCard = document.querySelector(".card-display");
 const error = document.querySelector(".errorMsg");
 const desc = document.querySelector(".desc");
 //
-const london_wind = document.querySelector(".wind-london");
-const london_visibility = document.querySelector(".visibility-london");
-//
+
 const apiKey = "837d7709853d7ea4af7694c9667e89e9";
+// const apiKey = process.env.API_KEY;
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric";
 
 // get london weather
